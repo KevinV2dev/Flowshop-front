@@ -28,7 +28,7 @@
 
 /* Se aplica tanto al body del app como al del index.html*/
 body {
-  background-color: #fafafa;
+  background-color: #F4F0FF;
   height: 100vh;
   margin: 0;
   padding: 50px;
@@ -44,24 +44,6 @@ body::-webkit-scrollbar {
 }
 
 /* APP.JS STYLES ---------------------------------------------------------- */
-
-/* HEADER ---------------------------------------------------------- */
-
-.logo {
-  cursor: pointer;
-}
-
-.container-navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.header-icons {
-  display: flex;
-  gap: 25px;
-  cursor: pointer;
-}
 
 .profile {
   display: flex;
@@ -131,21 +113,19 @@ body::-webkit-scrollbar {
   margin-left: 16px;
   overflow: hidden;
   border-radius: 16px;
-  flex: 1;
-  
+  height: 100%;
 }
 
-.contenedor-contenido { /* Nuevo envoltorio para barra-superior y seccion-principal */
-  display: flex; /* Diseño del área de contenido principal */
-  flex-direction: column; /* Barra superior arriba, seccion-principal abajo */
-  width: 100%; /* Rellena el espacio restante después de la barra lateral */
+.contenedor-contenido { 
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 .top-bar{
+  grid-column: 2/3;
+  grid-row: 1/2 ;
   display: flex;
-  justify-content: flex-end; /* Contenido alineado a la derecha */
-  width: 100%; /* Abarca todo el ancho */
-  margin-bottom: 40px;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -156,26 +136,30 @@ margin-right: 64px;
 }
 
 .container-creator{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 263px 1fr;
+  grid-template-rows: 60px 1fr;
+  height: calc(100vh - 100px);
 }
 
 /*sidebar*/
 
+.sidebar{
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
 
 .navigation{
-  width: 291px;
-  height: calc(100vh - 100px); /* Restamos el padding superior e inferior */
+  width: 259px;
   display: grid;
-  grid-template-columns: 291px auto;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 259px;
+  grid-template-rows: auto 160px 1fr 141px;
   gap: 16px;
   grid-auto-flow: row;
   grid-template-areas:
     "Logo Logo"
     "slogan-card slogan-card"
     "navigation navigation"
-    "hora hora"
     "config config";
     overflow: hidden;
 }
@@ -191,13 +175,9 @@ margin-right: 64px;
 
 .panel-list {
   grid-area: navigation;
-  width: 100%;
 }
 
-.hora-card {
-  grid-area: hora;
-  width: 100%;
-}
+
 
 .bottom-items {
   grid-area: config;
@@ -206,18 +186,20 @@ margin-right: 64px;
 
 .slogan-card {
   border-radius: 16px;
-  background: #fff;
-  max-height:201px;
+  background: #6335FF;
   overflow: hidden;
+  align-items: flex-start;
+  width: 259px;
+  padding: 12px;
 }
 
 .slogan-card span {
-  color: #000;
-font-family: Nohemi;
-font-size: 28px;
-font-style: normal;
-font-weight: 400;
-line-height: 37px; /* 132.143% */
+  color: var(--Cloud, #FFF);
+  font-family: Nohemi;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
 }
 
 .slogan {
@@ -248,42 +230,24 @@ line-height: 37px; /* 132.143% */
   line-height: 1;
 }
 
+
+.panel-list {
+  border-radius: 16px;
+  background: #fff;
+  width: 259px;
+  padding: 16px 0 8px;
+}
+
 .card-list-panel{
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 40px;
   margin-left: 17px;
-}
-.panel-list {
-  border-radius: 16px;
-  background: #fff;
-  width: 291px;
+  
 }
 
-.hora-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border-radius: 16px;
-  background: #fff;
-  width: 291px;
-}
-.hora-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-.hora-card span{
-  color: var(--Black, #302E2F);
-font-family: Nohemi;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-}
+
+
 .bottom-items {
   display: flex;
   justify-content: center;
@@ -291,7 +255,7 @@ line-height: normal;
   gap: 16px;
   border-radius: 16px;
   background: #fff;
-  width: 291px;
+  width: 259px;
   flex-shrink: 0;
 }
 
@@ -299,8 +263,14 @@ line-height: normal;
   margin-left: 25px;
 }
 
+.hora-container{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 #tutorial{
-  margin-top: 25px;
+
 }
 
 #tutorial,

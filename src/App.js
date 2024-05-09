@@ -16,7 +16,6 @@ function App() {
           <Sidebar />
         </div>
 
-      <div className='contenedor-contenido'>
         <div className='top-bar'>
             <div className='options'>
               <Aspect/>
@@ -30,8 +29,9 @@ function App() {
               <span className="username">Sioswel Medina</span>
             </div>
         </div>
-        
-        <section className='main-section'>
+
+      <div className='contenedor-contenido'>
+        <nav className='main-section'>
         <Routes>
         <Route path="/dashboard" element={<Proyectos />} />
         <Route path="/panelc" element={<Proyectos />} />
@@ -42,7 +42,7 @@ function App() {
         <Route path="/networks" element={<Proyectos />} />
         <Route path="/payments" element={<Proyectos />} />
         <Route path="/" element={<Navigate to="/dashboard" />} />        </Routes>
-        </section>
+        </nav>
         
       </div>
       </section>

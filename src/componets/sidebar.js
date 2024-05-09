@@ -32,7 +32,7 @@ const Sidebar = () => {
             </div>
 
             <div className="slogan-card">
-                <span className="slogan"> La excelencia no es un acto, es un hábito</span>
+                <span className="slogan"> Comienza tu día, sé productivo. 😎</span>
             </div>
 
             <div className="panel-list">
@@ -104,15 +104,14 @@ const Sidebar = () => {
                 </div>
             
 
-            <div className="hora-card">
-                <div className="hora-container">
+            <div className="bottom-items">
+
+            <div className="hora-container">
                     <HoraIcon/>
                     <span className="time">17:30</span>
                     <span className="date">04/15/2024</span>
                 </div>
-            </div>
 
-            <div className="bottom-items">
                 <div id="tutorial">
                     <TutorialIcon/>
                     <span>Tutoriales</span>
