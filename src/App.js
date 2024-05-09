@@ -8,30 +8,37 @@ import Notify from './componets/icons-navbar/Notify';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import SelectSocial from './componets/creator/base-creator/Selectsocial';
 import GuideCreator from './componets/creator/base-creator/GuideCreator';
+import FlowshopLogo from './componets/logo';
 function App() {
   return (
     <Router>
       <section className='container-creator'>
-        <div className='sidebar'>
-          <Sidebar />
-        </div>
 
-        <div className='top-bar'>
-            <div className='options'>
+      <header className='header'>
+      <div className='header-bar'>
+        <div><FlowshopLogo/></div>
+
+
+      <div className='bar-details'>
+          <div className='options'>
               <Aspect/>
               <Lang/>
               <Messages/>
               <Notify/>
-            </div>
+          </div>
 
-            <div className="profile">
+          <div className="profile">
               <div className="profile-image"></div>
               <span className="username">Sioswel Medina</span>
-            </div>
-        </div>
+          </div>
+          </div>
+      </div>
+      </header>
 
-      <div className='contenedor-contenido'>
-        <nav className='main-section'>
+          <Sidebar />
+
+
+        <div className='main-section'>
         <Routes>
         <Route path="/dashboard" element={<Proyectos />} />
         <Route path="/panelc" element={<Proyectos />} />
@@ -41,10 +48,9 @@ function App() {
         <Route path="/campaign" element={<Proyectos />} />
         <Route path="/networks" element={<Proyectos />} />
         <Route path="/payments" element={<Proyectos />} />
-        <Route path="/" element={<Navigate to="/dashboard" />} />        </Routes>
-        </nav>
-        
-      </div>
+        <Route path="/" element={<Navigate to="/dashboard" />} />        
+        </Routes>
+        </div>
       </section>
     </Router>
   );

@@ -1,7 +1,6 @@
 import React, { useState,} from "react";
 import DashboardIcon from './icons-sidebar/dashboardIcon'
 import AccountIcon from './icons-sidebar/accountIcon'
-import FlowshopLogo from "./logo";
 import CampaignIcon from './icons-sidebar/campaignIcon'
 import ConfigIcon from './icons-sidebar/configIcon'
 import ControlpanelIcon from './icons-sidebar/controlpanelIcon'
@@ -26,10 +25,6 @@ const Sidebar = () => {
     return (
     <>
         <div className="navigation">
-
-            <div className="Logo">
-                <FlowshopLogo/>
-            </div>
 
             <div className="slogan-card">
                 <span className="slogan"> Comienza tu día, sé productivo. 😎</span>
