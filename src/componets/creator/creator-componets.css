@@ -365,7 +365,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   box-shadow: 1.6px 1.6px 0px 0px rgba(0, 0, 0, 0.25);
   justify-content: center;
   align-items: center;
-  gap:20px;
+  gap: 20px;
 }
 
 .group-social span {
@@ -373,7 +373,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-family: Nohemi;
   font-size: 25.6px;
   font-style: normal;
-  font-weight: 600; 
+  font-weight: 600;
   line-height: normal;
 }
 
@@ -382,7 +382,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-items: center;
   vertical-align: middle; /* Nueva propiedad */
 }
-
 
 btn-social {
 }
@@ -403,34 +402,40 @@ btn-social {
 }
 
 /* Guide - Creator EDITOR QUILL*/
-.container-guide{
+.container-guide {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.title-guide{
+.title-guide {
   border-radius: 16px;
   display: flex;
   align-items: center;
-  background-color: #208cfd;
+  background-color: var(--primary);
   height: 80px;
 }
 
-.title-input input{
+.title-input input {
   border: none;
   outline: none;
   text-decoration: none;
   background: none;
   height: 30px;
   width: 100%;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: Nohemi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 125% */
 }
 
-.title-input{
-  width: 1415px;
+.title-input {
+  width: 100%;
 }
 
-input::placeholder{
+input::placeholder {
   color: rgba(255, 255, 255, 0.75);
   font-family: Nohemi;
   font-size: 24px;
@@ -439,7 +444,3 @@ input::placeholder{
   line-height: 30px; /* 125% */
   width: 100%;
 }
-
-
-
-
