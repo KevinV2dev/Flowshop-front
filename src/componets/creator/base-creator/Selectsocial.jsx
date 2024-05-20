@@ -6,6 +6,7 @@ import Instagramicon from '../../icons-creator/instagram-icon';
 import Tiktokicon from '../../icons-creator/tiktok-icon';
 import Xicon from '../../icons-creator/X-icon';
 import Yticon from '../../icons-creator/yt-icon';
+
 const SelectSocial  = () => {
   const navigate = useNavigate();
 

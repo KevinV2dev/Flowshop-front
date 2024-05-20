@@ -136,6 +136,7 @@ body::-webkit-scrollbar {
 .main-section {
   display: flex;
   overflow: hidden;
+  flex-wrap: wrap;
   border-radius: 16px;
   height: 100%;
   grid-column: 2/3;
@@ -437,3 +438,54 @@ margin-right: 64px;
 
 /*Section de Mantenimiento ----------------------------- */
 
+
+/*HOVER DE SELECT SOCIAL ------------------------------------------------*/
+
+.icon-social{
+  cursor: pointer;
+}
+
+.icon-social:hover .TiktokFill {
+  fill: #FE2858;
+  transition: ease-in-out 0.3s;
+}
+
+.icon-social:not(:hover) .TiktokFill{
+  transition: ease-in-out 0.3s;
+}
+
+.icon-social:hover .instagramfill {
+  fill: #FE2858;
+  transition: ease-in-out 0.3s;
+}
+
+.icon-social:not(:hover) .instagramfill{
+  transition: ease-in-out 0.3s;
+}
+
+.icon-social:hover .facebookFill {
+  fill: #0866FF;
+  transition: ease-in-out 0.3s;
+}
+
+.icon-social:not(:hover) .facebookFill{
+  transition: ease-in-out 0.3s;
+}
+
+.icon-social:hover .youtubefill {
+  fill: #F4190B;
+  transition: ease-in-out 0.3s;
+}
+
+.icon-social:not(:hover) .youtubefill{
+  transition: ease-in-out 0.3s;
+}
+
+.icon-social:hover .xfill{
+  fill: #000000;
+  transition: ease-in-out 0.3s;
+}
+
+.icon-social:not(:hover) .xfill{
+  transition: ease-in-out 0.3s;
+}

@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import '../creator-componets.css'
+import { Routes, Route } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const GuideCreator = () => {
+  const navigate = useNavigate();
+
+  const HandleButtonClick = () => {
+    navigate('/creator-content/FinishCreator');
+  };
   return (
     <>
     <div className='container-guide'>
@@ -15,30 +23,20 @@ const GuideCreator = () => {
 
       <div className='quill-container'>
         <div className='btn-quills'>
-        <CKEditor
-                    editor={ ClassicEditor }
-                    data="<p>Hello from CKEditor&nbsp;5!</p>"
-                    onReady={ editor => {
-                        // You can store the "editor" and use when it is needed.
-                        console.log( 'Editor is ready to use!', editor );
-                    } }
-                    onChange={ ( event ) => {
-                        console.log( event );
-                    } }
-                    onBlur={ ( event, editor ) => {
-                        console.log( 'Blur.', editor );
-                    } }
-                    onFocus={ ( event, editor ) => {
-                        console.log( 'Focus.', editor );
-                    } }
-                />
         </div>
 
         <div className='editor-quills'>
+          <p>Editor Aqui</p>
         </div>
-
+          <div className='btn-container-next'>
+          <button 
+          id='btn-next-guide'
+          onClick={HandleButtonClick}
+          >Siguiente</button>
+          </div>
       </div>
 
+      
     </div>
     </>
   )

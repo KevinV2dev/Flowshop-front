@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import SelectSocial from './componets/creator/base-creator/Selectsocial';
 import GuideCreator from './componets/creator/base-creator/GuideCreator';
 import FlowshopLogo from './componets/logo';
+import FinishCreator from './componets/creator/base-creator/FinishCreator';
 function App() {
   return (
     <Router>
@@ -39,12 +40,15 @@ function App() {
 
 
         <div className='main-section'>
+        
         <Routes>
         <Route path="/dashboard" element={<Proyectos />} />
         <Route path="/panelc" element={<Proyectos />} />
         <Route path="/projects" element={<Proyectos />} />
         <Route path="/creator-content" element={<SelectSocial/>} />
+        
         <Route path="/creator-content/GuideCreator" element={<GuideCreator/>} />
+        <Route path="/creator-content/FinishCreator" element={<FinishCreator/>} />
         <Route path="/campaign" element={<Proyectos />} />
         <Route path="/networks" element={<Proyectos />} />
         <Route path="/payments" element={<Proyectos />} />

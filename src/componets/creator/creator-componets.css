@@ -406,6 +406,8 @@ btn-social {
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 16px;
+
 }
 
 .title-guide {
@@ -429,10 +431,16 @@ btn-social {
   font-style: normal;
   font-weight: 500;
   line-height: 30px; /* 125% */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+
 }
 
 .title-input {
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0px 32px;
 }
 
 input::placeholder {
@@ -443,4 +451,172 @@ input::placeholder {
   font-weight: 500;
   line-height: 30px; /* 125% */
   width: 100%;
+}
+
+.quill-container{
+  border-radius: 16px;
+  background: var(--cloud);
+  height: 100%;
+  position: relative;
+}
+
+.btn-quills{
+  width: 100%;  /* Mantener ancho completo */
+    height: 60.154px;
+    background: #EFEFEF;
+    align-self: flex-end;
+
+}
+
+.btn-container-next{
+position: absolute;
+bottom: 0;
+right: 0;
+margin-right: 32px;
+margin-bottom: 16px;
+
+
+}
+
+#btn-next-guide{
+  border-radius: 16px;
+  background-color: var(--primary);
+  border: 0;
+  cursor: pointer;
+  width: 156px;
+  height: 46px;
+  color: var(--Cloud, #FFF);
+font-family: Nohemi;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 30px; /* 150% */
+
+
+}
+
+
+/* FINISH CREATOR  GRID LAYAOUT*/
+
+.container-finish {
+  display: grid;
+  max-height: calc(100vh - 16px);
+  grid-template-columns: 53.67% 45.33%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 113px;;
+  gap: 16px;
+  width: 100%;
+
+  grid-template-areas:
+    "descrip View"
+    "miniatura View"
+    "playlist View"
+    "etiquetas View"
+    "proyectos Boton";
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+
+
+
+.container-finish > div{
+  border-radius: 16px;
+  background-color: #FFF;
+}
+
+.descrip { 
+  grid-area: descrip;
+  overflow: hidden;
+  
+}
+
+.miniatura { 
+  grid-area: miniatura; 
+  display: flex;
+  flex-direction: row;
+  max-height: 175px;
+  gap: 15px;
+}
+
+.miniatura-settings{
+  display: flex;
+  flex-direction: column;
+}
+
+.miniatura-here{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.playlist { grid-area: playlist; }
+
+.etiquetas { grid-area: etiquetas; }
+
+.proyectos { grid-area: proyectos; }
+
+.View { grid-area: View; }
+
+.Boton { grid-area: Boton; }
+
+
+/* CARDS GRID FINISH CREATOR */
+
+.textarea-finish{
+  height: 100%;
+  width: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+  padding:  23px 16px 16px ;
+  font-family: Montserrat;
+}
+
+.textarea-finish textarea{
+color: rgba(0, 0, 0, 0.50);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+#span-miniatura-upload{
+  color: #000;
+font-family: Nohemi;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 30px; /* 150% */
+}
+
+#label-miniatura{
+  color: rgba(0, 0, 0, 0.50);
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.miniatura-here{
+  right: 0;
+  width: 257px;
+height: 145px;
+flex-shrink: 0;
+border-radius: 12px;
+background: #EDEDED;
+}
+
+
+
+
+
+/* Creator EDITOR QUILL*/
+
+.ck.ck-editor__main {
+  border-color: red;
+}
+
+.ck.ck-editor__editable_inline {
+  height: 100%;
 }
